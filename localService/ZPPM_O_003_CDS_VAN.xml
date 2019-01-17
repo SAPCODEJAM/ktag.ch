@@ -1,0 +1,15 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ER1CLNT400')/$value"><edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='ER1CLNT400')/$value"><edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='ER1CLNT400')/$value"><edmx:Include Alias="Communication" Namespace="com.sap.vocabularies.Communication.v1"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zppm_o_003_cds/$metadata"><edmx:Include Alias="SAP" Namespace="ZPPM_O_003_CDS"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zppm_o_003_cds_van.v1">
+			<Annotations Target="sap.com.cds_zppm_o_003.zppm_o_003Type/"><Annotation EnumMember="Common.FieldControlType/Hidden" Term="Common.FieldControl"/></Annotations>
+			<Annotations Target="sap.com.cds_zppm_o_003.zppm_o_003Type/project_guid"><Annotation EnumMember="Common.FieldControlType/Hidden" Term="Common.FieldControl"/></Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
