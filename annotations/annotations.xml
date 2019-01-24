@@ -1,37 +1,38 @@
 <!--===============================================================================
 	Swisscom Schweiz AG
-	Duhan Bernhard
+	Author: Duhan Bernhard
+	Project: SAP PPM Cockpit 2.0
 ================================================================================-->
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
 	<edmx:Reference Uri="/sap/bc/ui5_ui5/ui2/ushell/resources/sap/ushell/components/factsheet/vocabularies/UI.xml">
-		<edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="/sap/opu/odata/sap/ZPPM_O_003_CDS/$metadata">
-		<edmx:Include Namespace="ZPPM_O_003_CDS" Alias="ZPPM_O_003_CDS"/>
+		<edmx:Include Alias="ZPPM_O_003_CDS" Namespace="ZPPM_O_003_CDS"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.xml">
-		<edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+		<edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Authorization.V1.xml">
-		<edmx:Include Namespace="Org.OData.Authorization.V1" Alias="Auth"/>
+		<edmx:Include Alias="Auth" Namespace="Org.OData.Authorization.V1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
-		<edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
-		<edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470971/Communication.xml?api=v2">
-		<edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+		<edmx:Include Alias="Communication" Namespace="com.sap.vocabularies.Communication.v1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
-		<edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
+		<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Measures.V1.xml">
-		<edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+		<edmx:Include Alias="Measures" Namespace="Org.OData.Measures.V1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
-		<edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+		<edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
 	</edmx:Reference>
 	<edmx:DataServices>
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="ZPPMCOCKPIT.ZPPM_O_003_CDS">
@@ -42,7 +43,7 @@
 				<Annotation Term="Common.SortOrder">
 					<Collection>
 						<Record Type="Common.SortOrderType">
-							<PropertyValue PropertyPath="project_id" Property="Property"/>
+							<PropertyValue Property="Property" PropertyPath="project_id"/>
 						</Record>
 					</Collection>
 				</Annotation>
@@ -81,10 +82,12 @@
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="zzamp_ges"/>
 							<PropertyValue Property="Criticality" Path="zzamp_ges"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZZAMP_GES}"/>
 						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="zzamp_erg"/>
 							<PropertyValue Property="Criticality" Path="zzamp_erg"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZZAMP_ERG}"/>
 						</Record>
 					</Collection>
 				</Annotation>
@@ -113,6 +116,17 @@
 				</Annotation>
 			</Annotations>
 			<Annotations Target="sap.com.cds_zppm_o_003.ZPPM_C_005Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="ID" String="ID_005"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;@GeneralInfoFacetLabel}"/>
+							<PropertyValue Property="Facets">
+								<Collection/>
+							</PropertyValue>
+						</Record>
+					</Collection>
+				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
 						<Record Type="UI.DataField">
